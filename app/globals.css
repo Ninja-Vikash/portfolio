@@ -2,32 +2,142 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@font-face {
+  font-family: font-thin;
+  src: url("/fonts/Poppins-Thin.ttf") format('truetype');
+  font-weight: 100;
+}
+@font-face {
+  font-family: font-extralight;
+  src: url("/fonts/Poppins-ExtraLight.ttf") format('truetype');
+  font-weight: 200;
+}
+@font-face {
+  font-family: font-light;
+  src: url("/fonts/Poppins-Light.ttf") format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: font-regular;
+  src: url("/fonts/Poppins-Regular.ttf") format('truetype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: font-medium;
+  src: url("/fonts/Poppins-Medium.ttf") format('truetype');
+  font-weight: 500;
+}
+@font-face {
+  font-family: font-semibold;
+  src: url("/fonts/Poppins-SemiBold.ttf") format('truetype');
+  font-weight: 600;
+}
+@font-face {
+  font-family: font-bold;
+  src: url("/fonts/Poppins-Bold.ttf") format('truetype');
+  font-weight: 700;
+}
+@font-face {
+  font-family: font-extrabold;
+  src: url("/fonts/Poppins-ExtraBold.ttf") format('truetype');
+  font-weight: 800;
+}
+@font-face {
+  font-family: font-black;
+  src: url("/fonts/Poppins-Black.ttf") format('truetype');
+  font-weight: 900;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  color: white;
+}
+
+:root {
+  --main-bg: #01011f;
+
+  --font-100: font-thin;
+  --font-200: font-extralight;
+  --font-300: font-light;
+  --font-400: font-regular;
+  --font-500: font-medium;
+  --font-600: font-semibold;
+  --font-700: font-bold;
+  --font-800: font-extrabold;
+  --font-900: font-black;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  /* background-color: var(--main-bg); */
+  background-color: #000;
+  font-family: var(--font-400);
+  position: relative;
+  scroll-behavior: smooth;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+main {
+  position: relative;
+}
+
+.logo {
+  font-family: var(--font-500);
+}
+
+.nav-section {
+  font-family: var(--font-200);
+}
+
+/* ---------- Button Effects ------------ */
+.btn-1 {
+  z-index: 1;
+  position: relative;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+  overflow: hidden;
+  font-size: 12px;
+  font-family: var(--font-300);
+}
+
+.btn-1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: #2c2c36;
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+}
+
+.btn-1:hover {
+  color: #e8e8e8;
+}
+
+.btn-1:hover::before {
+  width: 100%;
+}
+
+/* ------------ Education ------------ */
+
+.education-card {
+  background: radial-gradient(
+    circle at 0% 0%,
+    #3e044f,
+    #380547,
+    #001055,
+    #1e1b74
+  );
+  transition: all ease-out 300ms;
+}
+.education-card:hover {
+  transform: translateY(10px);
+  scale: 1.03;
+}
+
+/* ------------- Skill Card ----------- */
+.home-skill-card {
+  background: radial-gradient(circle at -20% 100%, #055a88, #280177, #6f0b9a);
 }
