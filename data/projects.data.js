@@ -20,7 +20,7 @@ export const projectData = [
     desc: "A minimalistic weather app built on react with fully responsive layout",
     image: "P05",
     netlifyLink: "https://weather-gray-ten.vercel.app/",
-    githubLink: "https://github.com/Ninja-Vikash/yelpclone",
+    githubLink: "https://github.com/Ninja-Vikash/weather",
     techStack: ["REACTJS", "JS", "CSS"]
   },
   {
@@ -42,7 +42,7 @@ export const projectData = [
     desc: "Generate your brand suffix using Title Crafter. A simple and easy to use application",
     image: "P08",
     netlifyLink: "https://title-crafter.netlify.app/",
-    githubLink: "https://github.com/Ninja-Vikash/explore.io",
+    githubLink: "https://github.com/Ninja-Vikash/Title-Crafter",
     techStack: ["JS", "CSS", "HTML"]
   },
   {
@@ -58,7 +58,7 @@ export const projectData = [
     title: "File Organizer Utility",
     desc: "Organize your files very efficiently and use it anywhere after deployment.",
     image: "P07",
-    githubLink: "https://github.com/Ninja-Vikash/yelpclone",
+    githubLink: "https://github.com/Ninja-Vikash/file-organizer-utility",
     techStack: ["JS", "NODEJS"]
   },
 ];

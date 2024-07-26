@@ -13,4 +13,5 @@ export const skills = [
   "FIGMA",
   "VSCODE",
   "CPP",
+  "GPT",
 ];

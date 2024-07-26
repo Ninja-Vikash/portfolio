@@ -66,12 +66,15 @@
   --font-900: font-black;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   /* background-color: var(--main-bg); */
   background-color: #000;
   font-family: var(--font-400);
   position: relative;
-  scroll-behavior: smooth;
 }
 
 main {
@@ -120,24 +123,6 @@ main {
   width: 100%;
 }
 
-/* ------------ Education ------------ */
-
-.education-card {
-  background: radial-gradient(
-    circle at 0% 0%,
-    #3e044f,
-    #380547,
-    #001055,
-    #1e1b74
-  );
-  transition: all ease-out 300ms;
-}
-.education-card:hover {
-  transform: translateY(10px);
-  scale: 1.03;
-}
-
-/* ------------- Skill Card ----------- */
-.home-skill-card {
-  background: radial-gradient(circle at -20% 100%, #055a88, #280177, #6f0b9a);
+.myShadow {
+  box-shadow: 0px 0px 40px 30px #000000;
 }

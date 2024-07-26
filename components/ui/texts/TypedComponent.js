@@ -1,14 +1,15 @@
 "use client";
 import React, { useEffect } from "react";
 import Typed from "typed.js";
+import { typedRoles } from "@/data/roles.data";
 
 function TypedComponent() {
   useEffect(() => {
 
     const typed = new Typed("#typed", {
-      strings: ["MERN Stack Developer🚀", "Video Editor🎥", "Freelancer✨", "UI Designer🧑‍💻","Frontend Developer🔥"],
+      strings: typedRoles,
       startDelay: 200,
-      typeSpeed: 40,
+      typeSpeed: 50,
       backDelay: 1000,
       backSpeed: 40,
       showCursor: false,
@@ -22,7 +23,7 @@ function TypedComponent() {
 
   return (
     <>
-      <div className="mt-5 h-10 text-4xl" id="typed" style={{fontFamily: "var(--font-300)"}}></div>
+      <div className="text-4xl" id="typed" style={{fontFamily: "var(--font-300)"}}></div>
     </>
   );
 }

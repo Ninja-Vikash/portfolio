@@ -32,10 +32,10 @@ function ProjectCard({data}) {
 
         <div className="icons flex items-center gap-7">
           {data.netlifyLink && <a target='_blank' href={data.netlifyLink}>
-            <Icon icon={"ROCKET"} w={24}/>
+            <Icon icon={"ROCKET"} w={24} scale={true}/>
           </a>}
           <a target='_blank' href={data.githubLink}>
-            <Icon icon={"GITHUB"} w={32}/>
+            <Icon icon={"GITHUB"} w={32} scale={true}/>
           </a>
         </div>
 
