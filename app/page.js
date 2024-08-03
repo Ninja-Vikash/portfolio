@@ -1,4 +1,3 @@
-
 import Project from "@/components/containers/Project";
 import Skill from "@/components/containers/Skill";
 import About from "@/components/containers/About";
