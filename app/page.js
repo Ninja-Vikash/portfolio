@@ -3,26 +3,24 @@ import Skill from "@/components/containers/Skill";
 import About from "@/components/containers/About";
 import Collaborate from "@/components/containers/Collaborate";
 import LandingPage from "@/components/containers/LandingPage";
+import Root from "@/components/containers/Root";
 
 export default function Home() {
-
   return (
-    <main>
+    <Root>
+      <LandingPage />
 
-      <LandingPage/>
+      <About />
 
-      <About/>
-
-      <Project/>
+      <Project />
 
       <section id="skill" className="px-28 mt-20">
-        <Skill/>
+        <Skill />
       </section>
 
       <section className="footer-part py-20 px-28">
-        <Collaborate/>
+        <Collaborate />
       </section>
-
-    </main>
+    </Root>
   );
 }

@@ -23,7 +23,7 @@ function TypedComponent() {
 
   return (
     <>
-      <div className="text-4xl" id="typed" style={{fontFamily: "var(--font-300)"}}></div>
+      <div className="text-xl" id="typed" style={{fontFamily: "var(--font-300)"}}></div>
     </>
   );
 }
