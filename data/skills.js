@@ -1,0 +1,16 @@
+export const SKILLS = [
+  "ic-react-js",
+  "ic-javascript",
+  "ic-typescript",
+  "ic-material-ui",
+  "ic-tailwind-css",
+  "ic-css",
+  "ic-html",
+  "ic-node-js",
+  "ic-express-js",
+  "ic-mongo-db",
+  "ic-next-js",
+  "ic-git",
+  "ic-github",
+  "ic-vscode",
+];

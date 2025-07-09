@@ -1,0 +1,14 @@
+[
+  {
+    "label": "Home",
+    "url": "#"
+  },
+  {
+    "label": "about",
+    "url": "about"
+  },
+  {
+    "label": "skills",
+    "url": "skill"
+  }
+]

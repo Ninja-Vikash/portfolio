@@ -1,26 +1,27 @@
-import Project from "@/components/containers/Project";
-import Skill from "@/components/containers/Skill";
-import About from "@/components/containers/About";
-import Collaborate from "@/components/containers/Collaborate";
-import LandingPage from "@/components/containers/LandingPage";
-import Root from "@/components/containers/Root";
+import { MainLayout } from "@/components/layouts/core/main-layout";
+import { About } from "@/sections/about";
+import { Collaborate } from "@/sections/collaborate";
+
+import { MainHero } from "@/sections/hero";
+import { Projects } from "@/sections/projects";
+import { Skills } from "@/sections/skills";
 
 export default function Home() {
   return (
-    <Root>
-      <LandingPage />
+    <MainLayout>
+      <MainHero />
 
       <About />
 
-      <Project />
+      <Projects />
 
       <section id="skill" className="px-28 mt-20">
-        <Skill />
+        <Skills />
       </section>
 
       <section className="footer-part py-20 px-28">
         <Collaborate />
       </section>
-    </Root>
+    </MainLayout>
   );
 }
