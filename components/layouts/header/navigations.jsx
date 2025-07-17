@@ -16,16 +16,16 @@ export function Navigations() {
   };
 
   return (
-    <navbar className="flex-grow flex gap-7 items-center justify-end text-sm">
+    <nav className="flex-grow flex gap-7 items-center justify-end text-sm">
       <NavLink href="/">Home</NavLink>
 
       <NavLink href="#about" onClick={(e) => handleNavigation(e, "about")}>
         About
       </NavLink>
 
-      <NavLink href="/docs">Docs</NavLink>
+      <NavLink href="/">Docs</NavLink>
 
       <NavLink href="#">Founder</NavLink>
-    </navbar>
+    </nav>
   );
 }
