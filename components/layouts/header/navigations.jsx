@@ -4,7 +4,6 @@ import React from "react";
 import { NavLink } from "./nav-link";
 
 export function Navigations() {
-
   const handleNavigation = (event, targetId) => {
     event.preventDefault();
     const targetElement = document.getElementById(targetId);
@@ -17,19 +16,16 @@ export function Navigations() {
   };
 
   return (
-    <section className="nav-section flex-grow flex gap-7 items-center justify-end text-sm">
+    <navbar className="flex-grow flex gap-7 items-center justify-end text-sm">
+      <NavLink href="/">Home</NavLink>
 
-      <NavLink href="#">Home</NavLink>
+      <NavLink href="#about" onClick={(e) => handleNavigation(e, "about")}>
+        About
+      </NavLink>
 
-      <NavLink
-        href="#about"
-        onClick={(e) => handleNavigation(e, "about")}
-      >About</NavLink>
-      <NavLink
-        href="#skill"
-        onClick={(e) => handleNavigation(e, "skill")}
-      >Skills</NavLink>
+      <NavLink href="/docs">Docs</NavLink>
 
-    </section>
+      <NavLink href="#">Founder</NavLink>
+    </navbar>
   );
 }

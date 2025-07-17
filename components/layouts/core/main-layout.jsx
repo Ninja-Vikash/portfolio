@@ -1,17 +1,21 @@
 import { Aside } from "../aside";
 import { Footer } from "../footer";
-import { Navbar } from "../navbar";
+import { Header } from "../header";
 
-export function MainLayout({children}) {
+export function MainLayout({ children }) {
   return (
     <main>
-      <Navbar />
+      <Header
+        slots={{
+          startButton: true,
+        }}
+      />
 
       <Aside />
-      
-      {children}
+
+      <div className="px-28">{children}</div>
 
       <Footer />
     </main>
-  )
+  );
 }
