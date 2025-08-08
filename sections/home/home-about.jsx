@@ -1,5 +1,5 @@
-import React from "react";
 import Image from "next/image";
+import { Icon } from "@/components/icon";
 
 // ---------------------------------------------------
 
@@ -8,7 +8,7 @@ export function HomeAbout() {
     <p className="text-zinc-300 text-sm">
       Find me on: <br />
       <span className="inline-flex bg-zinc-950 mt-2 text-zinc-300 font-mono text-lg px-2 py-1 rounded-md border tracking-wide border-zinc-700">
-        <Image src="/Icons/ic-github-2.svg" alt="github-icon" width={20} height={20} />
+        <Icon src="/assets/icons/ic-github-2.svg" alt="github-icon" width={20} height={20} />
         /Ninja-Vikash
       </span>
     </p>
@@ -18,17 +18,15 @@ export function HomeAbout() {
     <p className="text-zinc-300 text-sm">
       Better google: <br />
       <span className="inline-flex gap-1 mt-2 bg-zinc-950 text-zinc-300 font-mono text-lg tracking-wide px-2 py-1 rounded-md border border-zinc-700">
-        <Image src="/Icons/ic-google.svg" alt="google-icon" width={18} height={18} />
+        <Icon src="/assets/icons/ic-google.svg" alt="google-icon" width={18} height={18} />
         /Ninja-Vikash
       </span>
     </p>
   );
+
   return (
     <section id="about" className="mb-10 flex gap-10 h-[90vh] relative">
       <figure className="relative h-[80%] w-full">
-        <Image src="/Images/about.jpg" alt="image" fill className="object-cover" />
-
-        {/* Mask Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black opacity-100 z-10"></div>
       </figure>
 

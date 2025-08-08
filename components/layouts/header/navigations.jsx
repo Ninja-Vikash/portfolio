@@ -16,7 +16,7 @@ export function Navigations() {
   };
 
   return (
-    <nav className="flex-grow flex gap-7 items-center justify-end text-sm">
+    <div className="flex-grow flex gap-7 items-center justify-end text-sm">
       <NavLink href="/">Home</NavLink>
 
       <NavLink href="#about" onClick={(e) => handleNavigation(e, "about")}>
@@ -24,8 +24,6 @@ export function Navigations() {
       </NavLink>
 
       <NavLink href="/">Docs</NavLink>
-
-      <NavLink href="#">Founder</NavLink>
-    </nav>
+    </div>
   );
 }

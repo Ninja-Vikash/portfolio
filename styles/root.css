@@ -1,4 +1,5 @@
 :root {
+  --bgcolor: #0C0C0B;
   --main-bg: #01011f;
 
   --font-100: font-thin;
@@ -10,4 +11,17 @@
   --font-700: font-bold;
   --font-800: font-extrabold;
   --font-900: font-black;
+}
+
+/* ********************************
+* BASELINE STYLE
+******************************** */
+*,*::after,*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  background-color: var(--bgcolor);
 }

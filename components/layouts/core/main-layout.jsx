@@ -2,14 +2,12 @@ import { Aside } from "../aside";
 import { Footer } from "../footer";
 import { Header } from "../header";
 
+// -------------------------------------------------
+
 export function MainLayout({ children }) {
   return (
     <main>
-      <Header
-        slots={{
-          startButton: true,
-        }}
-      />
+      <Header slots={{ startButton: true }} />
 
       <Aside />
 

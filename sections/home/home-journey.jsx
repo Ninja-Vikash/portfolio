@@ -1,70 +1,9 @@
-import { Card } from "@/components/card";
 import clsx from "clsx";
+import { Card } from "@/components/card";
+import { useMath } from "@/hooks/useMath";
+import { journeys as journeyData } from "@/data/journeys";
 
-export function HomeJourney() {
-  const journeyData = [
-    {
-      title: "When I have started?",
-      timePeriod: "Apr 28, 2023",
-      description: "Beginning of Web Development!",
-      color: "green",
-    },
-    {
-      title: "From an absolute Beginner!",
-      timePeriod: "Apr 29, 2023",
-      description:
-        "I didn't have any prior knowledge of programming. Everything is new for me. Started the journey with nothing.",
-      color: "red",
-    },
-    {
-      title: "1st Milestone 🎖️",
-      timePeriod: "May 13, 2023",
-      description:
-        "Built something amazing using only HTML for the first time. Not a big website, It was just a form with no styling just raw HTML.",
-      color: "blue",
-    },
-    {
-      title: "First step towards mastery 🚩",
-      timePeriod: "May 13, 2023",
-      description: "Gained good control over HTML. Confidently build structure of Websites.",
-      color: "fuchsia",
-    },
-    // {
-    //   title: "1st Milestone 🎖️",
-    //   timePeriod: "May 13, 2023",
-    //   description:
-    //     "Built something amazing using only HTML for the first time. Not a big website, It was just a form with no styling just raw HTML.",
-    //   color: "rose",
-    // },
-    // {
-    //   title: "1st Milestone 🎖️",
-    //   timePeriod: "May 13, 2023",
-    //   description:
-    //     "Built something amazing using only HTML for the first time. Not a big website, It was just a form with no styling just raw HTML.",
-    //   color: "teal",
-    // },
-  ];
-
-  return (
-    <div className="relative px-4 py-3 flex justify-center">
-      <div className="absolute left-1/2 transform -translate-x-1/2 h-full border-l-2 border-gray-300"></div>
-
-      <div className="w-2/3">
-        {journeyData.map((data, index) => (
-          <TimeLineCard
-            {...data}
-            key={index}
-            positions={{
-              justify: index % 2 === 0 ? "start" : "end",
-              text: index % 2 === 0 ? "right" : "left",
-            }}
-            position={index % 2 === 0 ? "right" : "left"}
-          />
-        ))}
-      </div>
-    </div>
-  );
-}
+// -----------------------------------------------
 
 function TimeLineCard({ title, description, timePeriod, position, color }) {
   return (
@@ -94,6 +33,7 @@ function TimeLineCard({ title, description, timePeriod, position, color }) {
           <p className="mt-1 text-gray-400">{description}</p>
         </Card>
       </div>
+
       <div className="relative w-0">
         <span
           className={clsx(
@@ -108,6 +48,24 @@ function TimeLineCard({ title, description, timePeriod, position, color }) {
         ></span>
       </div>
       <div className="w-1/2"></div>
+    </div>
+  );
+}
+
+// -----------------------------------------------
+
+export function HomeJourney() {
+  const { math } = useMath();
+
+  return (
+    <div className="relative px-4 py-3 flex justify-center">
+      <div className="absolute left-1/2 transform -translate-x-1/2 h-full border-l-2 border-gray-300"></div>
+
+      <div className="w-2/3">
+        {journeyData.map((data, index) => (
+          <TimeLineCard {...data} key={index} position={math.isEven(index) ? "right" : "left"} />
+        ))}
+      </div>
     </div>
   );
 }

@@ -1,13 +1,15 @@
-import Image from "next/image";
+import { Icon } from "../icon";
+
+// -------------------------------------------
 
 export function Logo() {
   return (
-    <h2 className="logo-base">
-      <Image src="/dev-bot.svg" alt="logo" width={20} height={20} className="invert" />
+    <h2 className="flex gap-2">
+      <Icon src="/assets/logo/logo.svg" alt="logo" width={28} height={28} />
 
-      <span className="logo-text">
-        vikash.<span className="logo-text-end">ai</span>
-      </span>
+      <div className="text-green-500 font-extrabold text-xl">
+        Index
+      </div>
     </h2>
   );
 }
