@@ -3,9 +3,9 @@ import { NavLink } from 'react-router';
 // -------------------------------------------
 
 const NAVITEMS = [
-  { url: '/', label: 'Home' },
-  { url: '/', label: 'Blogs' },
-  { url: '/', label: 'Services' },
+  { url: '/', label: 'Present' },
+  { url: '/', label: 'Skills' },
+  { url: '/', label: 'Contact' },
 ];
 
 // -------------------------------------------
@@ -17,7 +17,7 @@ export function Navigations() {
         <NavLink
           to={item.url}
           key={item.url}
-          className="text-sm font-medium hover:text-green-400 transition-all"
+          className="text-sm font-medium text-gray-600 transition-all"
         >
           {item.label}
         </NavLink>

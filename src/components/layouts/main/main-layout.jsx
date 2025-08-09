@@ -1,4 +1,5 @@
 import { Header } from '../header';
+import { BgGradientMask } from '../bg-gradient-mask';
 
 // ----------------------------------------------
 
@@ -7,7 +8,7 @@ export function MainLayout({ children }) {
     <Main>
       <Header />
 
-      <div className="px-16">{children}</div>
+      <div className="px-32">{children}</div>
     </Main>
   );
 }
@@ -15,5 +16,10 @@ export function MainLayout({ children }) {
 // ----------------------------------------------
 
 function Main({ children }) {
-  return <main className="min-h-[100dvh] bg-zinc-950 text-white">{children}</main>;
+  return (
+    <main className="min-h-[100dvh] relative bg-black/70">
+      <BgGradientMask />
+      {children}
+    </main>
+  );
 }
