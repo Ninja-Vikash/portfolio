@@ -7,7 +7,7 @@ import { IconButton } from 'src/components/icon-button/icon-button';
 
 export function HomeView() {
   return (
-    <div>
+    <div className="flex gap-3">
       <Card className="w-8/12 bg-linear-to-tl to-zinc-950 via-zinc-800/30 from-amber-400/60 border border-zinc-900/96 rounded-ee-sm rounded-ss-2xl rounded-se-4xl rounded-es-4xl">
         {/* *********************************
          * HEADER
@@ -44,6 +44,12 @@ export function HomeView() {
             I enjoy learning new things and try to overcome new challenges while analyzing how I
             improved through them.
           </p>
+        </div>
+      </Card>
+
+      <Card className="w-4/12 overflow-hidden relative bg-[radial-gradient(circle_at_bottom,white_40%,#fde047_70%,#facc15_100%)] rounded-es-sm rounded-ee-4xl rounded-se-2xl rounded-ss-4xl">
+        <div className="absolute -bottom-8 left-16">
+          <Iconify icon="fluent-emoji:ninja-light" width={280} />
         </div>
       </Card>
     </div>
