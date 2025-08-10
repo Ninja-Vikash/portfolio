@@ -1,4 +1,4 @@
-import { HomeView } from 'src/sections/app/view';
+import { HomeView } from 'src/sections/app/view/home-view';
 
 // ---------------------------------------------
 
