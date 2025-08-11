@@ -1,3 +1,7 @@
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { SplitText } from 'gsap/SplitText';
+
 import { Card } from 'src/components/card';
 import { Avatar } from 'src/components/avatar';
 import { Iconify } from 'src/components/iconify';
@@ -5,31 +9,52 @@ import { IconButton } from 'src/components/icon-button';
 
 import { contacts } from '../contacts';
 
+gsap.registerPlugin(useGSAP, SplitText);
+
 const CONTACTS = Object.values(contacts);
 
 // ----------------------------------------
 
 export function HomeView() {
+  useGSAP(() => {
+    const tl1 = gsap.timeline();
+
+    const splitHead = SplitText.create('.split-head', { type: 'words, chars' });
+
+    tl1
+      .from('.animate-fade', { opacity: 0, duration: 0.4 })
+      .from('.animate-fade-in-up', { y: 16, opacity: 0, stagger: 0.025 })
+      .from(splitHead.chars, {
+        duration: 1,
+        y: 20,
+        autoAlpha: 0,
+        stagger: 0.025,
+      });
+  }, []);
+
   return (
     <div className="pb-4">
       <div className="flex flex-col md:flex-row gap-3">
-        <Card className="w-full md:w-8/12 bg-linear-to-tl to-zinc-950 via-zinc-800/30 from-amber-400/60 border border-zinc-900/96 rounded-ee-sm rounded-ss-2xl rounded-se-6xl rounded-es-6xl">
+        <Card className="animate-fade w-full md:w-8/12 bg-linear-to-tl to-zinc-950 via-zinc-800/30 from-amber-400/60 border border-zinc-900/96 rounded-ee-sm rounded-ss-2xl rounded-se-6xl rounded-es-6xl">
           {/* *********************************
            * HEADER
            ********************************* */}
-          <div className="flex items-center justify-between">
+          <div className="header flex items-center justify-between">
             <div className="flex items-center gap-3 md:gap-5">
-              <Avatar src="/assets/avatar.png" className="h-10 w-10 md:h-14 md:w-14" />
+              <Avatar
+                src="/assets/avatar.png"
+                className="animate-fade-in-up h-10 w-10 md:h-14 md:w-14"
+              />
 
               <div>
-                <h5 className="text-base md:text-lg">Hi, I&apos;m Vikash</h5>
-                <p className="text-sm text-gray-400">Front-end Developer</p>
+                <h5 className="animate-fade-in-up text-base md:text-lg">Hi, I&apos;m Vikash</h5>
+                <p className=" animate-fade-in-up text-sm text-gray-400">Front-end Developer</p>
               </div>
             </div>
 
             <div className="flex gap-2 md:gap-4">
               {CONTACTS.map(({ icon, url }) => (
-                <IconButton key={url} href={url} target="_blank">
+                <IconButton className="animate-fade-in-up" key={url} href={url} target="_blank">
                   <Iconify icon={icon} className="h-4 md:h-5 w-4 md:w-5" />
                 </IconButton>
               ))}
@@ -40,10 +65,10 @@ export function HomeView() {
            * BODY
            ********************************* */}
           <div className="my-3 md:my-6">
-            <h1 className="tracking-tighter md:tracking-normal">
+            <h1 className="animate-fade-in-up split-head tracking-tighter md:tracking-normal">
               Passionate to pursue the technology.
             </h1>
-            <p className="mt-3 md:mt-6 w-full md:w-3/4 text-gray-300 leading-6">
+            <p className="animate-fade-in-up mt-3 md:mt-6 w-full md:w-3/4 text-gray-300 leading-6">
               I enjoy learning new things and try to overcome new challenges while analyzing how I
               improved through them.
             </p>
@@ -109,7 +134,7 @@ export function HomeView() {
         </Card>
       </div>
 
-      <h4 className='mt-6 text-center text-zinc-500'>Made with 💖!</h4>
+      <h4 className="mt-6 text-center text-zinc-500">Made with 💖!</h4>
     </div>
   );
 }
