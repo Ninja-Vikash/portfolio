@@ -8,7 +8,7 @@ export function MainLayout({ children }) {
     <Main>
       <Header />
 
-      <div className="px-32">{children}</div>
+      <div className="padding_offset">{children}</div>
     </Main>
   );
 }

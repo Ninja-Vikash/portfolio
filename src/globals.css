@@ -19,16 +19,16 @@
   }
 
   h1 {
-    @apply text-6xl font-medium leading-20;
+    @apply text-4xl md:text-6xl font-medium leading-12 md:leading-20;
   }
   h2 {
-    @apply text-5xl font-medium;
+    @apply text-3xl md:text-5xl font-medium;
   }
   h3 {
-    @apply text-3xl font-medium;
+    @apply text-2xl md:text-3xl font-medium;
   }
   h4 {
-    @apply text-2xl font-medium;
+    @apply text-xl md:text-2xl font-medium;
   }
   h5 {
     @apply text-xl font-semibold;
@@ -39,5 +39,12 @@
   p {
     font-size: 16px;
     font-weight: 400;
+  }
+
+  /* *************************************
+  * CUSTOM CLASSES
+  ************************************* */
+  .padding_offset {
+    @apply  px-4 xl:px-32 transition-all
   }
 }
