@@ -89,7 +89,7 @@ export function HomeView() {
           <img
             alt="quizforces-glance"
             src="/assets/backgrounds/quizforces-glance.png"
-            className="absolute mx-auto sm:left-0 md:left-auto bottom-0 md:w-[90%]"
+            className="absolute mx-auto left-0 md:left-auto bottom-0 md:w-[90%]"
           />
 
           <div className="md:px-3">
